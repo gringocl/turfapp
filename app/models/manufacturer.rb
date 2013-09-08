@@ -3,5 +3,9 @@ class Manufacturer < ActiveRecord::Base
 	validates :name, uniqueness: true
 	
 	has_many :products, :dependent => :destroy
+
+  def self.list
+    all(order: 'name')
+  end
 	
 end

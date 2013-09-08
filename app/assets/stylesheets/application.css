@@ -12,3 +12,7 @@
  *= require_tree .
  */
  *= require foundation_and_overrides
+
+.nav-area {
+  background-image: image-path("classy_fabric.png");
+ }

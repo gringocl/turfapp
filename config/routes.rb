@@ -1,4 +1,5 @@
 Turfapp::Application.routes.draw do
+  get "pages/home"
   resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.

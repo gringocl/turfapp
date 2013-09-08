@@ -16,6 +16,7 @@ class ProductsController < ApplicationController
   end
 
   def create
+    # render text: params[:product].inspect
     @product = Product.new(product_params)
 
     respond_to do |format|
