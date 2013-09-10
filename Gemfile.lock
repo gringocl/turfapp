@@ -6,13 +6,6 @@ GIT
       actionpack (>= 4.0.0, < 4.1)
       activemodel (>= 4.0.0, < 4.1)
 
-GIT
-  remote: git://github.com/zurb/foundation.git
-  revision: f70a4e3e1f038c1b7b06ab6ea7b86d2a496466b0
-  specs:
-    zurb-foundation (4.3.1)
-      sass (>= 3.2.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -187,6 +180,8 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     xpath (2.0.0)
       nokogiri (~> 1.3)
+    zurb-foundation (4.3.1)
+      sass (>= 3.2.0)
 
 PLATFORMS
   ruby
@@ -211,4 +206,4 @@ DEPENDENCIES
   simple_form!
   turbolinks
   uglifier (>= 1.3.0)
-  zurb-foundation!
+  zurb-foundation

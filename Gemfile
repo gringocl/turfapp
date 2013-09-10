@@ -14,7 +14,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 gem "compass-rails", "~> 2.0.alpha.0"
-gem 'zurb-foundation', :git  => 'git://github.com/zurb/foundation.git'
+gem 'zurb-foundation'
 
 group :development do
   gem "better_errors"
