@@ -1330,6 +1330,10 @@ $topbar-sticky-class: ".sticky";
     background-image: url(image_path('classy_fabric.png'));
 }
 
+ul.left {
+    background-image: url(image_path('classy_fabric.png'));
+}
+
 body {
   background-image: url(image_path('fabric_plaid.png'))
 }
@@ -1339,3 +1343,15 @@ body {
     background-image: url(image_path('orbit_3.jpg'));
     background-repeat:no-repeat;
 }
+
+.top-bar-section ul {
+    background-image: url(image_path('classy_fabric.png'))
+}
+
+.top-bar-section li a:not(.button) {
+    background-image: url(image_path('classy_fabric.png'))
+}
+
+// .top-bar-section ul li.active > a {
+//     background-image: url(image_path('fabric_plaid.png'))
+// }
