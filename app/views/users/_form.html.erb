@@ -1,0 +1,23 @@
+<fieldset>
+  <%= simple_form_for @user, html: {class: 'custom'} do |f| %>
+  <% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+  
+  <%= f.input :first_name %><br>
+  <%= f.input :last_name%><br>
+  <%= f.input :phone, as: :string %><br>
+  <%= f.input :email %><br>
+
+
+  <%= f.button :submit, class: 'radius' %>
+  <% end %>
+</fieldset>
