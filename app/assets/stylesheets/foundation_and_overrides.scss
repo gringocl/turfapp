@@ -79,10 +79,10 @@ $default-float: left;
 
 // Colors
 
-// $primary-color: #2ba6cb;
-// $secondary-color: #e9e9e9;
-// $alert-color: #c60f13;
-// $success-color: #5da423;
+$primary-color: rgba(#2ba6cb, .9);
+$secondary-color: rgba(#f9f9f9, .8);
+$alert-color: rgba(#c60f13, .8);
+$success-color: rgba(#84ce23, .9);
 
 // Make sure border radius matches unless we want it different.
 
@@ -1335,7 +1335,7 @@ ul.left {
 }
 
 body {
-  background-image: url(image_path('fabric_plaid.png'))
+  background-image: url(image_path('fabric_plaid.png'));
 }
 
 .products {

@@ -1,0 +1,12 @@
+<%= simple_form_for @contact, html: {class: 'custom'} do |f| %>
+    <%= render 'error' %>
+    
+    <%= f.input :first_name %><br>
+    <%= f.input :last_name %><br>
+    <%= f.input :phone %><br>
+    <%= f.input :mobile %><br>
+    <%= f.input :email %><br>
+
+
+    <%= f.button :submit, class: 'radius' %>
+  <% end %>

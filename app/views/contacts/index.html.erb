@@ -1,0 +1,32 @@
+<h1>Contacts</h1>
+
+<table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @contacts.each do |contact| %>
+            <tr>
+              <td><%= contact.name %></td>
+              <td><%= contact.phone %></td>
+              <td><%= contact.mobile %></td>
+              <td><%= contact.email %></td>
+              <td><%= link_to 'Show', contact, class: "button small radius secondary" %></td>
+              <td><%= link_to 'Edit', edit_contact_path(contact), class: "button small radius" %></td>
+              <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' }, class: "button small radius alert" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <br>
+<%= link_to 'New contact', new_contact_path, class: "button medium radius" %>

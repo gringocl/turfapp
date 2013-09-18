@@ -2,6 +2,7 @@ Turfapp::Application.routes.draw do
   get "pages/home"
   resources :products
   resources :users
+  resources :contacts
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
