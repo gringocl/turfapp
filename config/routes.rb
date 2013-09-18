@@ -1,5 +1,8 @@
 Turfapp::Application.routes.draw do
+  get "/signin", to: "sessions#new"
+  post "/signin", to: "sessions#create"
   get "pages/home"
+
   resources :products
   resources :users
   resources :contacts
