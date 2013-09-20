@@ -1,7 +1,7 @@
 Turfapp::Application.routes.draw do
   get "/signin", to: "sessions#new"
   post "/signin", to: "sessions#create"
-  get "pages/home"
+  delete "/signout", to: "sessions#destroy", as: "signout"
 
   resources :products
   resources :users
@@ -11,7 +11,7 @@ Turfapp::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'products#index'
+  root :to => 'high_voltage/pages#show', id: 'home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

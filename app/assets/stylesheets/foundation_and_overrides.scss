@@ -82,7 +82,7 @@ $default-float: left;
 $primary-color: rgba(#2ba6cb, .9);
 $secondary-color: rgba(#f9f9f9, .8);
 $alert-color: rgba(#c60f13, .8);
-$success-color: rgba(#84ce23, .9);
+$success-color: rgba(#84ce23, 1);
 
 // Make sure border radius matches unless we want it different.
 
@@ -229,9 +229,9 @@ $success-color: rgba(#84ce23, .9);
 
 // Style the <hr> element
 
-// $hr-border-width: 1px;
+$hr-border-width: 2px;
 // $hr-border-style: solid;
-// $hr-border-color: #ddd;
+$hr-border-color: rgba(0,0,0,0.6);
 // $hr-margin: em-calc(20);
 
 // Style lists
@@ -816,12 +816,12 @@ $success-color: rgba(#84ce23, .9);
 
 // We use these to control the caption styles
 
-// $orbit-container-bg: #f5f5f5;
-// $orbit-caption-bg: rgba(0,0,0,0.6);
+$orbit-container-bg: rgba(0,0,0,0);
+$orbit-caption-bg: rgba(0,0,0,0.5);
 // $orbit-caption-font-color: #fff;
 // $orbit-caption-font-size: emCalc(14);
-// $orbit-caption-position: "bottom";    // Supported values: "bottom", "under"
-// $orbit-caption-padding: emCalc(10,14);
+$orbit-caption-position: "bottom";    // Supported values: "bottom", "under"
+// $orbit-caption-padding: emCalc(20,28);
 // $orbit-caption-height: auto;
 
 // We use these to control the left/right nav styles
@@ -850,8 +850,8 @@ $success-color: rgba(#84ce23, .9);
 
 // Graceful Loading Wrapper and preloader
 
-// $wrapper-class: "slideshow-wrapper";
-// $preloader-class: "preloader";
+$wrapper-class: "slideshow-wrapper";
+$preloader-class: "preloader";
 
 //
 // Pagination Variables
@@ -1128,7 +1128,7 @@ $success-color: rgba(#84ce23, .9);
 // $sub-nav-active-cursor: default;
 
 // $sub-nav-item-divider: "" !default;
-// $sub-nav-item-divider-margin: emCalc(12) !default;
+// $sub-nav-item-divider-margin: emCalc(0) !default;
 
 //
 // Switch Variables
@@ -1338,10 +1338,11 @@ body {
   background-image: url(image_path('fabric_plaid.png'));
 }
 
-.products {
-    background: none;
-    background-image: url(image_path('orbit_3.jpg'));
-    background-repeat:no-repeat;
+div.orbit-caption > h3 {
+  color:white;
+}
+.top-bar-section li:hover a {
+  background-image: url(image_path('classy_fabric.png'))
 }
 
 .top-bar-section ul {
@@ -1352,6 +1353,39 @@ body {
     background-image: url(image_path('classy_fabric.png'))
 }
 
-// .top-bar-section ul li.active > a {
-//     background-image: url(image_path('fabric_plaid.png'))
-// }
+.top-bar-section ul li.active > a {
+    background-image: url(image_path('classy_fabric.png'))
+}
+
+.top-bar-section ul li > a {
+  background-image: url(image_path('classy_fabric.png'))
+}
+
+.top-bar-section ul.dropdown {
+  color: #fff;
+}
+
+.top-bar-section > ul > .divider {
+  border-right: none;
+  border-left: none;
+}
+
+.top-bar-section .has-form {
+  background-color: transparent;
+}
+
+footer {
+  background-image: url(image_path('classy_fabric.png'));
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.footer a {
+  color: #84ce23;
+  font-weight: bold;
+}
+
+.copy {
+  color: #fff;
+}
