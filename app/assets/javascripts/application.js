@@ -18,5 +18,3 @@
 $(document).foundation();
 
 $(function(){ $(document).foundation(); });
-
-
