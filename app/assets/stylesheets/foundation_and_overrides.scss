@@ -898,7 +898,7 @@ $preloader-class: "preloader";
 
 // $panel-bg: darken(#fff, 5%);
 // $panel-border-style: solid;
-// $panel-border-size: 1px;
+$panel-border-size: 1.5px;
 
 // We use this % to control how much we darken things on hover
 
@@ -1389,3 +1389,5 @@ footer {
 .copy {
   color: #fff;
 }
+
+

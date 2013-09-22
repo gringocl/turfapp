@@ -1,0 +1,30 @@
+<h1>Clients List</h1>
+
+<table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>State</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @clients.each do |client| %>
+            <tr>
+              <td><%= client.name %></td>
+              <td><%= client.city %></td>
+              <td><%= client.state %></td>
+              <td><%= link_to 'Show', client, class: "button small radius secondary" %></td>
+              <td><%= link_to 'Edit', edit_client_path(client), class: "button small radius" %></td>
+              <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' }, class: "button small radius alert" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <br>
+<%= link_to 'New client', new_client_path, class: "button medium radius" %>

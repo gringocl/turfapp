@@ -1,4 +1,11 @@
 Turfapp::Application.routes.draw do
+  get "invoices/index"
+  get "invoices/show"
+  get "invoices/new"
+  get "invoices/edit"
+  get "invoices/create"
+  get "invoices/update"
+  get "invoices/destroy"
   get "/signin", to: "sessions#new"
   post "/signin", to: "sessions#create"
   delete "/signout", to: "sessions#destroy", as: "signout"

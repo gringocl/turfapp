@@ -1,0 +1,74 @@
+<%= form_for @client, html: {class: "custom"} do |f| %>
+  
+  <%= render 'error' %>
+  
+  <div class="small-3 columns">
+    <%= f.label :name, class: "right inline" %>
+  </div>
+  
+  <div class="small-9 columns">
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="small-3 columns">
+    <%= f.label "Street address", class: "right inline" %>
+  </div>
+  
+  <div class="small-9 columns">
+    <%= f.text_field :address1 %>
+  </div>
+
+  <div class="small-3 columns">
+    <%= f.label "Address", class: "right inline" %>
+  </div>
+  
+  <div class="small-9 columns">
+    <%= f.text_field :address2 %>
+  </div>
+
+  <div class="small-3 columns">
+    <%= f.label :city, class: "right inline" %>
+  </div>
+  
+  <div class="small-9 columns">
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="small-3 columns">
+    <%= f.label :state, class: "right inline" %>
+  </div>
+  
+  <div class="small-9 columns">
+    <%= f.select :state, us_states %>
+  </div>
+
+  <div class="small-3 columns">
+    <%= f.label :zipcode, class: "right inline" %>
+  </div>
+  
+  <div class="small-9 columns">
+    <%= f.text_field :zipcode %>
+  </div>
+
+  <div class="small-3 columns">
+    <%= f.label :phone, class: "right inline" %>
+  </div>
+  
+  <div class="small-9 columns">
+    <%= f.text_field :phone %>
+  </div>
+
+  <div class="small-3 columns">
+    <%= f.label :fax, class: "right inline" %>
+  </div>
+  
+  <div class="small-9 columns">
+    <%= f.text_field :fax %>
+  </div>
+
+  <div class="small-12 push-8 columns">
+    <%= f.submit class: "button radius" %>
+  </div>
+
+
+<% end %>
