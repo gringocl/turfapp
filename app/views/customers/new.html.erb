@@ -1,0 +1,11 @@
+<%= simple_form_for @customer, html: {class: 'custom'} do |f| %>
+    <%= render 'error' %>
+    
+  <%= f.input :name, label: 'Customer Name' %><br>
+    <%= f.simple_fields_for :clients do |c| %><br>
+      <%= c.input :name, label: 'Client Name' %><br>
+    <% end %>
+
+    <%= f.button :submit, class: 'radius' %>
+  
+  <% end %>

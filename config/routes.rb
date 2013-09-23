@@ -1,19 +1,12 @@
 Turfapp::Application.routes.draw do
-  get "invoices/index"
-  get "invoices/show"
-  get "invoices/new"
-  get "invoices/edit"
-  get "invoices/create"
-  get "invoices/update"
-  get "invoices/destroy"
+
   get "/signin", to: "sessions#new"
   post "/signin", to: "sessions#create"
   delete "/signout", to: "sessions#destroy", as: "signout"
 
   resources :products
   resources :users
-  resources :contacts
-  resources :clients
+  resources :customers
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
