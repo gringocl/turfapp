@@ -11,43 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130920013418) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20130923032424) do
 
   create_table "clients", force: true do |t|
     t.string   "name"
-    t.string   "address1"
-    t.string   "address2"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zipcode"
-    t.string   "phone"
-    t.string   "fax"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "contacts", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "phone"
-    t.string   "mobile"
-    t.string   "email"
+  create_table "customers", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "invoice_items", force: true do |t|
+    t.integer  "invoice_id"
+    t.integer  "product_id"
+    t.integer  "quantity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "invoice_items", ["invoice_id"], name: "index_invoice_items_on_invoice_id"
+  add_index "invoice_items", ["product_id"], name: "index_invoice_items_on_product_id"
 
   create_table "invoices", force: true do |t|
     t.integer  "number"
-    t.integer  "client_id"
     t.integer  "subtotal"
     t.integer  "total"
-    t.decimal  "discount",   default: 0.0
+    t.decimal  "discount",    default: 0.0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "customer_id"
   end
+
+  add_index "invoices", ["customer_id"], name: "index_invoices_on_customer_id"
 
   create_table "manufacturers", force: true do |t|
     t.string   "name"
@@ -64,7 +63,7 @@ ActiveRecord::Schema.define(version: 20130920013418) do
     t.integer  "manufacturer_id"
   end
 
-  add_index "products", ["manufacturer_id"], name: "index_products_on_manufacturer_id", using: :btree
+  add_index "products", ["manufacturer_id"], name: "index_products_on_manufacturer_id"
 
   create_table "users", force: true do |t|
     t.string   "first_name"
