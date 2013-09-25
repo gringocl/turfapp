@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'high_voltage'
 gem 'kaminari'
+gem 'rails_12factor'
 
 
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
