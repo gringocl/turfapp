@@ -1198,10 +1198,10 @@ $panel-border-size: 1.5px;
 
 // These control the row padding and font styles
 
-// $table-row-padding: em-calc(9 10);
+$table-row-padding: em-calc(3 10 2);
 // $table-row-font-size: em-calc(14);
 // $table-row-font-color: #222;
-// $table-line-height: em-calc(18);
+$table-line-height: em-calc(18);
 
 // These are for controlling the display and margin of tables
 

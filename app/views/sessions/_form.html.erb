@@ -1,5 +1,6 @@
 <fieldset>
           <%= simple_form_for :signin, method: "POST" do |f| %>
+            <%= hidden_field_tag :return_to, params[:return_to] %>
             <%= f.input :email %><br>
             <%= f.input :password %><br>
             <%= f.button :submit, 'Sign In!', class: 'radius success' %>

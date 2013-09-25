@@ -1,6 +1,6 @@
 
     <h1>Listing products</h1></li>
-
+      <%= paginate @products %>
       <table>
         <thead>
           <tr>
@@ -28,7 +28,7 @@
           <% end %>
         </tbody>
       </table>
-
+        <%= paginate @products %>
       <br>
 <%= link_to 'New Product', new_product_path, class: "button medium radius" %>
     

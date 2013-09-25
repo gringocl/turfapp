@@ -1,0 +1,37 @@
+<h1>Customers</h1>
+
+<table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Contacts</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @customers.each do |customer| %>
+            <tr>
+              <td><%= customer.name %></td>
+              <td></td>
+              <td><%= link_to 'Show', customer, class: "button small radius secondary" %></td>
+              <td><%= link_to 'Edit', edit_customer_path(customer), class: "button small radius" %></td>
+              <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' }, class: "button small radius alert" %></td>
+            </tr>
+              <% customer.contacts.each do |contact| %>
+            <tr>
+              <td></td>
+              <td><%= contact.name %></td>
+              <td><%= link_to 'Show', customer, class: "button small radius secondary" %></td>
+              <td><%= link_to 'Edit', edit_customer_path(customer), class: "button small radius" %></td>
+              <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' }, class: "button small radius alert" %></td>
+            </tr>
+              <% end %>
+            <% end %>
+        </tbody>
+      </table>
+
+      <br>
+<%= link_to 'New customer', new_customer_path, class: "button medium radius" %>
