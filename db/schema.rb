@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20130927014312) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.decimal  "price",           precision: 6, scale: 2
+    t.decimal  "price",           precision: 9, scale: 2
     t.integer  "manufacturer_id"
   end
 
