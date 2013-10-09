@@ -1,2 +1,16 @@
-<h1>Invoices#new</h1>
-<p>Find me in app/views/invoices/new.html.erb</p>
+<h1>Create new invoice</h1>
+
+<%= simple_form_for @invoice, html: {class: 'custom'} do |f| %>
+  <%= f.input :number %><br>
+  <%= f.input :customer_id, collection: Customer.all, include_blank: false, prompt: 'Please select Customer' %><br>
+  <%= f.date_select :created_at, disabled: true  %>
+    <%= f.simple_fields_for :invoice_items do |i| %>
+
+      <%= i.input :product_id, collection: Product.all, include_blank: false %>
+      <%# i.input :product_price, disabled: true %>
+      <%= i.input :quantity %>
+      <%# i.input :subtotal, disabled: true %>
+    <% end %>
+  <%= f.input :total, disabled: true %>
+  <%= f.button :submit, class: 'radius success' %>
+<% end %>

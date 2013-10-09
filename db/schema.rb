@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130923211012) do
+ActiveRecord::Schema.define(version: 20130927014312) do
 
   create_table "contacts", force: true do |t|
     t.string   "name"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20130923211012) do
     t.integer  "quantity"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "subtotal",   precision: 9, scale: 2
   end
 
   add_index "invoice_items", ["invoice_id"], name: "index_invoice_items_on_invoice_id"
@@ -41,12 +42,11 @@ ActiveRecord::Schema.define(version: 20130923211012) do
 
   create_table "invoices", force: true do |t|
     t.integer  "number"
-    t.integer  "subtotal"
-    t.integer  "total"
-    t.decimal  "discount",    default: 0.0
+    t.decimal  "discount",                            default: 0.0
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "customer_id"
+    t.decimal  "total",       precision: 9, scale: 2
   end
 
   add_index "invoices", ["customer_id"], name: "index_invoices_on_customer_id"
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20130923211012) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.decimal  "price",           precision: 8, scale: 2
+    t.decimal  "price",           precision: 6, scale: 2
     t.integer  "manufacturer_id"
   end
 

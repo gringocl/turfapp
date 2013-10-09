@@ -3,7 +3,6 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.0'
 
-gem 'pg'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -13,7 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'high_voltage'
 gem 'kaminari'
-gem 'rails_12factor'
+
 
 
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
@@ -23,6 +22,7 @@ gem 'zurb-foundation'
 group :development do
   gem "better_errors"
   gem 'sqlite3'
+  gem "binding_of_caller"
 end
 
 group :development, :test do
@@ -42,4 +42,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
